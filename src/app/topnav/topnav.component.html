@@ -1,11 +1,82 @@
+
 <header class="menuUser box">
   <div class="navbar">
 
+
+    <button mat-button (click)="toggle()"><mat-icon>menu</mat-icon></button>
     <a href="logedIndex.html"><img src="assets/img/logo.png" alt="logo"/></a>
+
+
     <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
 
-    <button type="button" id="sidebarCollapse" class="btn btn-success">
-      <i class=" 	fa fa-cog"></i>
-    </button>
+    <div class="login">
+
+      <!-- debut popUp Window login-->
+
+
+      <a href="#" data-toggle="modal" data-target="#popUpWindow"><i class="fa fa-fw fa-user"></i>Login</a>
+
+      <div class="modal fade" id="popUpWindow">
+        <div class="modal-dialog">
+          <div class="modal-content-style">
+            <!-- header -->
+            <div class="modal-header-style">
+              <button type="button" class="btn btn-success" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title">Club Marmelade</h3>
+            </div>
+            <!-- body -->
+            <div class="modal-header-style">
+              <form role="form">
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Email"/>
+                  <input type="password" class="form-control" placeholder="Password" />
+                </div>
+              </form>
+            </div>
+            <!-- footer -->
+            <div class="modal-footer-style">
+              <a href="logedIndex.html" class="btn btn-success btn-block">Log In for the Horde</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Fin popUp Window login-->
+
+      <!-- debut popUp Window Subscribe-->
+
+
+      <a href="#" data-toggle="modal" data-target="#popUpWindow2"><i class="fa fa-fw fa-envelope"></i> Inscription</a>
+
+      <div class="modal fade" id="popUpWindow2">
+        <div class="modal-dialog">
+          <div class="modal-content-style">
+            <!-- header -->
+            <div class="modal-header-style">
+              <button type="button" class="btn btn-success" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title">Welcome to Club Marmelade</h3>
+            </div>
+            <!-- body -->
+            <div class="modal-header-style">
+              <form role="form">
+                <div class="form-group-style">
+                  <input type="email" class="form-control-style" placeholder="Email"/>
+                  <input type="Username" class="form-control-style" placeholder="Username" />
+                  <input type="password" class="form-control-style" placeholder="Password" />
+                  <input type="confirm password" class="form-control-style" placeholder="Confirm Password" />
+                </div>
+              </form>
+            </div>
+            <!-- footer -->
+            <div class="modal-footer-style">
+              <a href="logedIndex.html" class="btn btn-success btn-block">Welcome to Narnia !</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>

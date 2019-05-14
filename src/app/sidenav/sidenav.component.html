@@ -1,40 +1,21 @@
-<nav id="sidebar" class="navUser active">
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side"
+               [(opened)]= "this.opened"
+               [fixedInViewport]="true"
+               [fixedTopGap]="50"
+               [fixedBottomGap]="100">
 
-  <div class="sidebar-header">
-    <h3>Bootstrap Sidebar</h3>
-  </div>
+<nav id="sidebar" class="navUser active">
 
   <ul class="list-unstyled components">
     <li class="active">
-      <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-      <ul class="collapse list-unstyled" id="homeSubmenu">
-        <li>
-          <a href="#">Home 1</a>
-        </li>
-        <li>
-          <a href="#">Home 2</a>
-        </li>
-        <li>
-          <a href="#">Home 3</a>
-        </li>
-      </ul>
+      <a href="#">Home</a>
     </li>
     <li>
       <a href="#">About</a>
     </li>
     <li>
-      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-      <ul class="collapse list-unstyled" id="pageSubmenu">
-        <li>
-          <a href="#">Page 1</a>
-        </li>
-        <li>
-          <a href="#">Page 2</a>
-        </li>
-        <li>
-          <a href="#">Page 3</a>
-        </li>
-      </ul>
+      <a href="#">Pages</a>
     </li>
     <li>
       <a href="#">Portfolio</a>
@@ -45,3 +26,5 @@
   </ul>
 
 </nav>
+  </mat-sidenav>
+</mat-sidenav-container>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {SidenavComponent} from "../sidenav/sidenav.component";
+
 
 @Component({
   selector: 'app-topnav',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopnavComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private _side: SidenavComponent) { }
+
+
+  toggle() {
+    this._side.newFlag();
+  }
 
   ngOnInit() {
   }

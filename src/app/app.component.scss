@@ -1,6 +1,8 @@
+
+
 .sectionUser {
   display: grid;
-  grid-template-columns: [nav-start] 15% [nav-end] auto [main-end] 25% [aside-end];
+  grid-template-columns: [nav-start] auto [nav-end] auto [main-end] auto [aside-end];
   grid-template-rows: [head-start] auto [head-end] auto [body-end];
 }
 
@@ -33,6 +35,4 @@ app-secondary {
   grid-row-start: head-end;
   grid-row-end: body-end;
 }
-
-
 
