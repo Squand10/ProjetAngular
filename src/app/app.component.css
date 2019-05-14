@@ -9,10 +9,9 @@ app-topnav {
   grid-column-end: aside-end;
   grid-row-start: head-start;
   grid-row-end: head-end;
-
 }
 
-app-sidenav{
+app-sidenav {
   grid-column-start: nav-start;
   grid-column-end: nav-end;
   grid-row-start: head-end;
@@ -24,7 +23,6 @@ app-primary {
   grid-column-end: main-end;
   grid-row-start: head-end;
   grid-row-end: body-end;
-
 }
 
 app-secondary {
@@ -34,5 +32,4 @@ app-secondary {
   grid-row-end: body-end;
 }
 
-
-
+/*# sourceMappingURL=app.component.css.map */
