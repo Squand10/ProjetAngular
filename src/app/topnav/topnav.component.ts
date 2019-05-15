@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { SidenavService} from '../sidenav/sidenav.service';
+
+import { SidenavService} from '../navbar/sidenav.service';
+
 
 
 @Component({

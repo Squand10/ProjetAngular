@@ -15,7 +15,8 @@ import { TopnavComponent } from './topnav/topnav.component';
 import { PrimaryComponent } from './primary/primary.component';
 import { SecondaryComponent } from './secondary/secondary.component';
 import {DemoMaterialModule} from './material-module';
-import {SidenavService} from './sidenav/sidenav.service';
+import {SidenavService} from './navbar/sidenav.service';
+import { NavbarComponent } from './navbar/navbar.component';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { routing } from './app.routing';
@@ -36,8 +37,11 @@ import { RegisterComponent } from './register/register.component';
     TopnavComponent,
     PrimaryComponent,
     SecondaryComponent,
+
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    NavbarComponent,
+
   ],
   imports: [
     FormsModule,

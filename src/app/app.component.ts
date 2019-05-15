@@ -1,5 +1,5 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
-import { SidenavService } from './sidenav/sidenav.service';
+import { SidenavService } from './navbar/sidenav.service';
 import { MatSidenav } from '@angular/material';
 
 
@@ -16,5 +16,6 @@ export class AppComponent implements OnInit{
   constructor(private sidenavService: SidenavService) {	}
 
   ngOnInit(): void {
+    this.sidenavService.setSidenav(this.sidenav);
   }
 }

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { MatSidenav } from '@angular/material';
-import { SidenavComponent } from './sidenav.component';
 
 @Injectable()
 export class SidenavService {
@@ -8,6 +7,12 @@ export class SidenavService {
 
   public setSidenav(sidenav: MatSidenav) {
     this.sidenav = sidenav;
+  }
+  public open() {
+    return this.sidenav.open();
+  }
+  public close() {
+    return this.sidenav.close();
   }
   public toggle(): void {
     this.sidenav.toggle();
