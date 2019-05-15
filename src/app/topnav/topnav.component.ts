@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {SidenavComponent} from "../sidenav/sidenav.component";
 import { SidenavService} from '../sidenav/sidenav.service';
 
 
@@ -23,3 +22,4 @@ export class TopnavComponent{
     console.log('Clicked');
   }
 }
+
