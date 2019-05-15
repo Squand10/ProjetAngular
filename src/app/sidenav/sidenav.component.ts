@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { SidenavService} from './sidenav.service';
+import { MatSidenav } from '@angular/material';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,17 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  public opened: boolean = true;
 
-  constructor() { }
+  @ViewChild('rightSidenav') public sidenav: MatSidenav;
 
-  newFlag() {
-      this.opened = !this.opened;
-      console.log(this.opened);
+  constructor(private sidenavService: SidenavService) {	}
+
+  ngOnInit(): void {
+    this.sidenavService.setSidenav(this.sidenav);
   }
-
-  ngOnInit() {
-  }
-
 
 }

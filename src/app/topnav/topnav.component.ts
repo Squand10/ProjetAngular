@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {SidenavComponent} from "../sidenav/sidenav.component";
+import { SidenavService} from '../sidenav/sidenav.service';
 
 
 @Component({
@@ -7,17 +8,18 @@ import {SidenavComponent} from "../sidenav/sidenav.component";
   templateUrl: './topnav.component.html',
   styleUrls: ['./topnav.component.scss']
 })
-export class TopnavComponent implements OnInit {
+export class TopnavComponent{
 
 
-  constructor(private _side: SidenavComponent) { }
+  constructor(private sidenav: SidenavService) { }
 
 
-  toggle() {
-    this._side.newFlag();
+  toggleActive:boolean = false;
+
+  toggleNav() {
+    this.toggleActive = !this.toggleActive;
+    this.sidenav.toggle();
+
+    console.log('Clicked');
   }
-
-  ngOnInit() {
-  }
-
 }

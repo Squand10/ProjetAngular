@@ -12,6 +12,7 @@ import { TopnavComponent } from './topnav/topnav.component';
 import { PrimaryComponent } from './primary/primary.component';
 import { SecondaryComponent } from './secondary/secondary.component';
 import {DemoMaterialModule} from './material-module';
+import {SidenavService} from './sidenav/sidenav.service';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,7 @@ import {DemoMaterialModule} from './material-module';
     BrowserAnimationsModule,
     DemoMaterialModule
   ],
-  providers: [
-    SidenavComponent
-  ],
+  providers: [SidenavService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

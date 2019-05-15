@@ -1,9 +1,8 @@
 <mat-sidenav-container class="example-container">
-  <mat-sidenav mode="side"
-               [(opened)]= "this.opened"
-               [fixedInViewport]="true"
-               [fixedTopGap]="50"
-               [fixedBottomGap]="100">
+  <mat-sidenav #sidenav mode="side"
+               class="sidenav"
+               opened
+               [fixedInViewport]="true">
 
 <nav id="sidebar" class="navUser active">
 
