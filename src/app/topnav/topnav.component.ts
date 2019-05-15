@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import {SidenavComponent} from "../sidenav/sidenav.component";
-import { SidenavService} from '../sidenav/sidenav.service';
+import { DrawerService} from '../navbar/drawer.service';
 
 
 @Component({
@@ -11,14 +10,14 @@ import { SidenavService} from '../sidenav/sidenav.service';
 export class TopnavComponent{
 
 
-  constructor(private sidenav: SidenavService) { }
+  constructor(private drawer: DrawerService) { }
 
 
   toggleActive:boolean = false;
 
   toggleNav() {
     this.toggleActive = !this.toggleActive;
-    this.sidenav.toggle();
+    this.drawer.toggle();
 
     console.log('Clicked');
   }
