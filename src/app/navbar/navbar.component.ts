@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { DrawerService } from './drawer.service';
-import { MatDrawer } from "@angular/material";
+import { SidenavService } from './sidenav.service';
+import { MatSidenav } from "@angular/material";
 
 @Component({
   selector: 'app-navbar',
@@ -10,12 +10,12 @@ import { MatDrawer } from "@angular/material";
 
 export class NavbarComponent {
 
-  @ViewChild('drawer') public drawer: MatDrawer;
+  @ViewChild('sidenav') public sidenav: MatSidenav;
 
-  constructor(private drawerService: DrawerService) {	}
+  constructor(private sidenavService: SidenavService) {	}
 
   ngOnInit(): void {
-    this.drawerService.setDrawer(this.drawer);
+    this.sidenavService.setSidenav(this.sidenav);
   }
 
 }

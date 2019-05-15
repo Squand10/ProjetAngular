@@ -85,7 +85,7 @@ img {
 
 .masthead {
   background-image:url(assets/img/background/fontInputUnlogedIndex.png);
-  background-attachment: relative;
+
   padding: 250px 250px 375px;
 
 }
@@ -441,7 +441,7 @@ ul.CTAs a {
 ----------------------------------------------------- */
 
 #content {
-  width: 100%;
+  position:relative;
   min-height: 100vh;
   transition: all 0.3s;
   top: 0;

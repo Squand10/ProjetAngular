@@ -12,7 +12,7 @@ import { TopnavComponent } from './topnav/topnav.component';
 import { PrimaryComponent } from './primary/primary.component';
 import { SecondaryComponent } from './secondary/secondary.component';
 import {DemoMaterialModule} from './material-module';
-import {DrawerService} from './navbar/drawer.service';
+import {SidenavService} from './navbar/sidenav.service';
 import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
@@ -31,7 +31,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserAnimationsModule,
     DemoMaterialModule
   ],
-  providers: [DrawerService],
+  providers: [SidenavService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DrawerService} from '../navbar/drawer.service';
+import { SidenavService} from '../navbar/sidenav.service';
 
 
 @Component({
@@ -10,14 +10,14 @@ import { DrawerService} from '../navbar/drawer.service';
 export class TopnavComponent{
 
 
-  constructor(private drawer: DrawerService) { }
+  constructor(private sidenav: SidenavService) { }
 
 
   toggleActive:boolean = false;
 
   toggleNav() {
     this.toggleActive = !this.toggleActive;
-    this.drawer.toggle();
+    this.sidenav.toggle();
 
     console.log('Clicked');
   }
