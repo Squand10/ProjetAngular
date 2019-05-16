@@ -1,27 +1,17 @@
 
 <header class="menuUser box">
   <div class="navbar">
-
-
     <button mat-button [class.active]="toggleActive" (click)="toggleNav()"><mat-icon>menu</mat-icon></button>
     <a href="logedIndex.html"><img src="assets/img/logo.png" alt="logo"/></a>
-
 
     <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
 
     <div class="login">
-
-      <!-- debut popUp Window login-->
-
+      <!--Login and register routes-->
       <a routerLink="/login" data-toggle="modal" data-target="#popUpWindow"><i class="fa fa-fw fa-user"></i>Login</a>
-
-      <!-- Fin popUp Window login-->
-
-      <!-- debut popUp Window Subscribe-->
-
-
       <a routerLink="/register" data-toggle="modal" data-target="#popUpWindow2"><i class="fa fa-fw fa-envelope"></i> Inscription</a>
-
     </div>
+
+
   </div>
 </header>

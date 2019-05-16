@@ -19,16 +19,23 @@ import {SidenavService} from './navbar/sidenav.service';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { routing } from './app.routing';
-
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { ErrorInterceptor  } from './helpers/error.interceptor';
 import { fakeBackendProvider } from './helpers/fake-backend';
 
 
-
+import {RouterModule, Routes} from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import {AuthGuard} from './guards/auth.guard';
+
+
+const appRoutes: Routes = [
+  { path: '', component: SecondaryComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: '**', redirectTo: '' }
+];
 
 @NgModule({
   declarations: [
@@ -37,7 +44,6 @@ import { RegisterComponent } from './register/register.component';
     TopnavComponent,
     PrimaryComponent,
     SecondaryComponent,
-
     LoginComponent,
     RegisterComponent,
     NavbarComponent,
@@ -52,7 +58,7 @@ import { RegisterComponent } from './register/register.component';
     DemoMaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
-    routing
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     SidenavService,
